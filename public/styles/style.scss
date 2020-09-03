@@ -78,10 +78,10 @@ h6 {
   }
 }
 #subnavheading {
-  font-family: museo_slab500, Arial, Helvetica, sans-serif;
+  font-family: museo_slab300, Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 14px;
-
+  font-weight: normal;
   text-align: right;
   letter-spacing: 0.24px;
   color: #afafaf;
@@ -139,7 +139,7 @@ h6 {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 20px;
+  padding: 28px 0px;
   position: relative;
   user-select: none;
 }
@@ -228,7 +228,7 @@ h6 {
 .left {
   flex: 1;
   text-align: left;
-  padding-right: 60px;
+  padding-right: 118px;
   border-right: 1px solid #f0f0f0;
 
   h1 {
@@ -261,9 +261,9 @@ h6 {
 
 .right {
   flex: 1;
-  padding-left: 60px;
+  padding-left: 98px;
   font-family: museo_slab300, Arial, Helvetica, sans-serif;
-
+  font-weight: normal;
   h2 {
     font-family: museo_slab300, Arial, Helvetica, sans-serif;
     letter-spacing: 0px;
@@ -290,7 +290,8 @@ h6 {
 
 .map {
   position: relative;
-  margin-right: -41px;
+  margin-right: -101px;
+  margin-left: -100px;
   #mainmap {
     position: relative;
 
@@ -299,7 +300,7 @@ h6 {
     width: 100%;
     height: auto;
     object-fit: cover;
-    margin-top: -180px;
+    margin-top: -175px;
     object-position: center;
   }
 
@@ -342,7 +343,8 @@ h6 {
 }
 .salesandredevmobile {
   font-family: HelveticaNeue, Arial, Helvetica, sans-serif;
-
+  font-size: 16px;
+  font-weight: normal;
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
@@ -359,6 +361,7 @@ h6 {
 // enquiry form
 
 .mainform {
+  max-width: 475px;
   margin-top: 40px;
   .form-group {
     width: 100%;
@@ -429,6 +432,8 @@ h6 {
     width: 150px;
     height: 45px;
     color: #ffffff;
+
+    text-align: center;
     font-family: museo_slab500, Arial, Helvetica, sans-serif;
     font-size: 12px;
     letter-spacing: 0px;
@@ -436,7 +441,9 @@ h6 {
 
     background: #3971b1;
     border: 0px;
+
     span i {
+      width: 0px;
       opacity: 0;
       color: white;
       fill: white;
@@ -445,6 +452,7 @@ h6 {
   button:hover {
     cursor: pointer;
     span i {
+      width: 10px;
       transform: translateX(20px);
       opacity: 1;
       transition: 0.3s;
@@ -468,7 +476,7 @@ h6 {
 .select-selected:after {
   position: absolute;
   content: "";
-  top: 25px;
+  top: 30px;
   right: 10px;
   width: 0;
   height: 0;
@@ -479,7 +487,7 @@ h6 {
 /* Point the arrow upwards  */
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #3971b1 transparent;
-  top: 17px;
+  top: 25px;
   transition: 0.3s;
 }
 
@@ -489,11 +497,15 @@ h6 {
   color: #8e8e8e;
 
   font-size: 16px;
-  padding: 20px 16px;
+  padding: 25px 16px;
   border: 1px solid transparent;
   border-bottom: 1px solid #d3d3d3;
 
   cursor: pointer;
+}
+
+.select-items div:last-child {
+  border-bottom: 0px solid white;
 }
 
 /* Style items (options): */
@@ -509,6 +521,9 @@ h6 {
 /* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
+}
+#last-child {
+  background-color: red;
 }
 
 .select-items div:hover,
@@ -632,6 +647,10 @@ footer {
     ::placeholder {
       padding-left: 11px;
       letter-spacing: 0px;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 30px;
+      letter-spacing: 0px;
       color: #818181;
     }
     input {
@@ -684,7 +703,7 @@ footer {
 .lastrow {
   display: flex;
   justify-content: space-between;
-  padding: 7px 0px;
+  padding: 11px 0px;
   p {
     margin: 0px;
     line-height: 38px;
@@ -701,7 +720,7 @@ footer {
     float: left;
   }
   .header li a {
-    padding: 20px 30px;
+    padding: 20px 25px;
   }
   .header .menu {
     clear: none;
@@ -733,6 +752,8 @@ footer {
 //     }
 //   }
 // }
+
+// ######################################################################################################
 
 @media (max-width: 699px) {
   .header {
@@ -777,13 +798,13 @@ footer {
     .contactlinks {
       margin-top: 40px;
       line-height: 32px;
-      max-width: 90%;
+      max-width: 84%;
     }
     .map {
       position: absolute;
       bottom: 50%;
       right: -268px;
-
+      margin-left: -50px;
       #mainmap {
         max-width: 100%;
         object-fit: cover;
@@ -791,7 +812,7 @@ footer {
         max-width: 100%;
       }
       #tracker {
-        right: 55%;
+        right: 66%;
       }
     }
   }
@@ -869,7 +890,8 @@ footer {
     }
   }
 
-  .footer {
+  footer {
+    padding-top: 45px;
     margin-top: 75px;
   }
 }
